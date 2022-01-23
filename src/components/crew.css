@@ -1,0 +1,43 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.crew-members {
+    display: block;
+}
+
+h3 {
+    color: white;
+}
+
+#member {
+    margin: 25px 10px 50px 10px;
+    display: inline-block;
+    width: 25%;
+    background-color:rgba(28, 28, 28, .5);
+    border-radius: 25px;
+    box-shadow: 10px 8px 10px black;
+}
+
+#member img {
+    height: 250px;
+    width: 250px;
+    margin-top: 25px;
+    border-radius: 200px;
+    object-position: left;
+    object-fit:cover;
+}
+
+#member button {
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(270deg, rgb(120, 38, 136) 0%, rgb(121, 63, 148) 100%);
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
