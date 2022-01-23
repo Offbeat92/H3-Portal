@@ -51,7 +51,9 @@ export class VideoFetch extends Component {
               videos.map(video => {
               const { etag, id, snippet } = video;
           return (
-          //Hur informationen kommer visas i appen
+          //Hur informationen kommer visas i appen.
+          //Varje video kommer visas som ett eget objekt, och redan i fetchen speciferar jag att jag vill ha högst 10 videos.
+          //Jag skapar en länk till varje video, visar titel, uppladdningsdatum och videons thumbnail.
             <div class='video' key={id.videoId}>
               <a target="_blank" rel="noopener noreferrer" href={`https://www.youtube.com/watch?v=${id.videoId}` } ><h2>{snippet.title}</h2></a>
               <p>Uploaded: {snippet.publishedAt}</p>
@@ -67,6 +69,7 @@ export class VideoFetch extends Component {
       ) : (
         // Laddningsmeddelandet ifall vi väntar på svar...
         <h3>Loading...</h3>
+        //Sedan länkar jag in Twitter-feeden, tack vare en installation jag gjort tack vare NPM.
       )}
        
       <div class='twitter'>
