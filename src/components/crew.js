@@ -5,7 +5,8 @@ import Footer from './footer';
 
 export class Crew extends Component {
     
-
+  //I constructorn lägger jag en handleClick, för att kunna skapa funktionen som
+  //senare hämtar id:t användaren klickar på för att visa rätt sökning i api:et.
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -23,6 +24,7 @@ export class Crew extends Component {
         error: null
     }
 
+        //Här använder jag samma typ av kod som i test.js för att visa de videosarna som inkluderas i id:t.
       fetchCrewVideos(crewid) {
         console.log("fetchCrew" + crewid);
         fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${crewid}&maxResults=10&order=date&key=AIzaSyCzOaXaAEipDFtW-N9_wOYhfo3EQOp3xRU`)
